@@ -9,6 +9,7 @@ import { ExpandCircleDownRounded } from '@mui/icons-material';
 import img1 from '../../src/img/img1.png'
 import img2 from '../../src/img/img2.png'
 import img3 from '../../src/img/img3.jpg'
+import img4 from '../../src/img/img4.png'
 const Accord = () => {
     const [expanded, setExpanded] = useState<string | false>(false)
     const handealChange = (isExpanded: boolean, panal: string) => {
@@ -27,10 +28,10 @@ const Accord = () => {
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
-                            <Typography>Accordion 1</Typography>
+                            <Typography>Project Overview</Typography>
                         </AccordionSummary>
                         <AccordionDetails sx={{ backgroundColor: "black", color: "white" }}>
-                            <Typography>
+                            <Typography sx={{ textAlign:"justify" }}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                 malesuada lacus ex, sit amet blandit leo lobortis eget.
                             </Typography>
@@ -42,25 +43,40 @@ const Accord = () => {
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography>Accordion 2</Typography>
+                            <Typography>Rules</Typography>
                         </AccordionSummary>
                         <AccordionDetails sx={{ backgroundColor: "black", color: "white" }}>
-                            <Typography>
+                            <Typography sx={{ textAlign:"justify" }}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                 malesuada lacus ex, sit amet blandit leo lobortis eget.
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
                     <Accordion expanded={expanded === 'panal3'} onChange={(event, isExpanded) => handealChange(isExpanded, 'panal3')} onClick={() => setImageUri(`${img3}`)}>
-                        <AccordionSummary sx={{ backgroundColor: "black", color: "white", borderTop: "2px solid gray", borderBottom: "2px solid gray" }}
+                        <AccordionSummary sx={{ backgroundColor: "black", color: "white", borderTop: "2px solid gray"}}
                             expandIcon={<ExpandMoreIcon sx={{ backgroundColor: "black", color: "white" }} />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography >Accordion 3</Typography>
+                            <Typography >Forms</Typography>
                         </AccordionSummary>
                         <AccordionDetails sx={{ backgroundColor: "black", color: "white" }}>
-                            <Typography>
+                            <Typography sx={{ textAlign:"justify" }}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                    <Accordion expanded={expanded === 'panal4'} onChange={(event, isExpanded) => handealChange(isExpanded, 'panal4')} onClick={() => setImageUri(`${img4}`)}>
+                        <AccordionSummary sx={{ backgroundColor: "black", color: "white", borderTop: "2px solid BurlyWood", borderBottom: "2px solid DarkGoldenRod" }}
+                            expandIcon={<ExpandMoreIcon sx={{ backgroundColor: "black", color: "white" }} />}
+                            aria-controls="panel2a-content"
+                            id="panel2a-header"
+                        >
+                            <Typography >Templates</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails sx={{ backgroundColor: "black", color: "white" }}>
+                            <Typography sx={{ textAlign:"justify" }}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                 malesuada lacus ex, sit amet blandit leo lobortis eget.
                             </Typography>
